@@ -23,7 +23,7 @@ Jenkins (Build & Orchestrate)
 |---------------|----------|--------------|---------|-------------------------------|
 | Jenkins       | t3.medium| Ubuntu 22.04 | 15 GB   | 8080 (Jenkins), 22 (SSH)      |
 | SonarQube     | t3.medium| Ubuntu 22.04 | 15 GB   | 9000 (SonarQube), 5432 (DB), 22 |
-| App Server    | t3.micro | Ubuntu 22.04 | 10 GB   | 8090 (App), 22 (SSH)          |
+| App Server    | t3.small | Ubuntu 22.04 | 10 GB   | 8090 (App), 22 (SSH)          |
 
 ---
 
