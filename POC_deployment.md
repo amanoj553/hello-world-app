@@ -26,9 +26,11 @@ Jenkins (Build & Orchestrate)
 
 ## 3. Prerequisites and Configuration
 
-### A. Jenkins Server
+### A. In Jenkins Server (Ubuntu 22.04)
 
-**Install Packages on Ubuntu 22.04:**
+#### Install below Packages on Jenkins server
+
+**Install Java:**
 ```bash
 sudo apt update
 sudo apt install openjdk-21-jdk maven docker.io git unzip curl -y
@@ -40,7 +42,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins
 sudo apt update
 sudo apt install jenkins -y
 
-**start Jenkins:**
+# start Jenkins service
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 ```
@@ -56,8 +58,8 @@ wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.4.0/depe
 unzip dependency-check-8.4.0-release.zip -d /opt/dependency-check
 ```
 
-### B. SonarQube Server
-**Install SonarQube on Ubuntu 22.04:**
+### B. In SonarQube Server (Ubuntu 22.04)
+**Install SonarQube:**
 
 ```bash
 # Update system packages
@@ -156,7 +158,7 @@ LimitNPROC=4096
 [Install]
 WantedBy=multi-user.target
 
-# Note: Here in the above script, make sure to change the User and Group section with the value that you have created.
+Note: Here in the above script, make sure to change the User and Group section with the value that you have created.
 # Enable the SonarQube service to run at system startup.
 sudo systemctl enable sonar
 
@@ -189,7 +191,7 @@ sudo reboot
 For example, http://IP:9000
 
 # Change the Old password with a New one.
-# Log in with username admin and password admin. In the next step, SonarQube will prompt you to change your password. CHANGE THE PASSWORD.
+Log in with username admin and password admin. In the next step, SonarQube will prompt you to change your password. CHANGE THE PASSWORD.
 ```
 **Our SonarQube has been installed successfully.**
 
@@ -335,10 +337,10 @@ curl http://<App-Server-IP>:8090/
 # Expected Output:
 Hello from Demo JAR App!
 ```
-**goto browser and check with below URL**
-- http://<App-Server-IP>:8090/
+**Goto browser and check with below URL**
+- http://<IP>:8090/
 - Expected Output:
-  - Hello from Demo JAR App!
+  - `Hello from Demo JAR App!`
 
 ## 8. Troubleshooting Tips:
 
@@ -351,3 +353,4 @@ Hello from Demo JAR App!
 **OWASP error about DB lock or permission denied?**
 - Ensure `/opt/dependency-check/data` is writable by Jenkins
 - Run dependency-check once manually as Jenkins user
+
