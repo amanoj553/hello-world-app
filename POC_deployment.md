@@ -1,6 +1,9 @@
 # CI/CD Pipeline Documentation for JAR Deployment to EC2
 
-## 1. Architecture Flow
+## 1. Architecture Flow Diagram
+
+![CI/CD Architecture](Flow_diagram.JPG)
+
 GitHub (Source Code)
 │
 ▼
