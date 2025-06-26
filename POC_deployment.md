@@ -332,6 +332,11 @@ pipeline {
 }
 ```
 
+![Build success status](Jenkins_build_success_status.JPG)
+
+![SonarQube Report](SonarQube_report.JPG)
+
+
 ## 7. Application test:
 
 **After deployment, verify the application:**
@@ -344,6 +349,8 @@ Hello from Demo JAR App!
 - http://<IP>:8090/
 - Expected Output:
   - `Hello from Demo JAR App!`
+  
+![ApplicationTest](deployment_confirm_status.JPG)
 
 ## 8. Troubleshooting Tips:
 
